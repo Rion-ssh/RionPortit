@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PortFolio-Riofa G.R</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="menu-toggle" id="menu-toggle">
+  ☰
+</div>
+    </nav>
+    <div class="logo">Riofa<span> G.R</span></div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#calcu">Calcu</a>
+      <a href="#testimonials">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="#home" class="back-to-home">⬆ Back to Home</a>
+      
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Rion</span></h1>
+      <h2>I'm a <b>TroubleMaker</b></h2>
+      <p>I'm an troublemaker and lazy man, ready for crashing ur problem twice</p>
+      <div class="buttons">
+        <a href="#hire" class="hire">Hire Me Plz unch</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="atsumu.jpg" alt="Atsumu Miya" />
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 style="padding: 50px;"><section id="skills" class="service-section">
+  <h2 class="section-title"></h2>
+  <div class="card-container">
+    <div class="service-card">
+      <i class="icon">📱</i>
+      <h3>Web designer</h3>
+      <p> memahami dasar-dasar pemahaman prinsip desain, keterampilan pemrograman dasar, dan pengetahuan tentang alat dan software desain web. </p>
+    </div>
+    <div class="service-card">
+      <i class="icon"></i>
+      <h3>Jaringan dasar & komputer</h3>
+      <p>memahami dasar jaringan, memahami dasar" topologi jaringan & routing switch/mikrotik</p>
+    </div>
+    <div class="service-card">
+      <i class="icon">🖥️</i>
+      <h3>Cyber Security</h3>
+      <p>memahami dan menangani berbagai aspek keamanan siber</p>
+    </div>
+  </div>
+</section>
+
+  </section>
+  <section id="calcu">
+    <h2 style="padding: 50px;"></h2>
+    <section id="calcu">
+  <div class="calcu-container">
+    <h2>Kalkulator Segitiga</h2>
+    <label for="alas">Alas:</label>
+    <input type="number" id="alas" placeholder="Masukkan alas">
+    <label for="tinggi">Tinggi:</label>
+    <input type="number" id="tinggi" placeholder="Masukkan tinggi">
+
+    <div class="button-group">
+      <button onclick="hitungLuas()">Hitung Luas</button>
+      <button onclick="hitungKeliling()">Hitung Keliling</button>
+    </div>
+
+    <p id="hasil"></p>
+  </div>
+</section>
+
+
+  </section>
+  <section id="testimonials">
+    <h2 style="padding: 50px;"></h2>
+    <section id="testimonials" class="experience-section">
+  <div class="experience-container">
+    <h2>Pengalaman</h2>
+    <div class="experience-item">
+      <h3>Rakit pc</h3>
+      <p>dasar merakit pc dengan komponen yang minimalis</p>
+    </div>
+    <div class="experience-item">
+      <h3>Proyek Web Portfolio</h3>
+      <p>Membangun dan mendesain website portfolio pribadi menggunakan HTML, CSS, dan sedikit JavaScript.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Cabelling</h3>
+      <p>dasar" membuat kabel fiber optik dan kabel RJ45</p>
+    </div>
+  </div>
+</section>
+  
+ </section>
+  <section id="contact">
+    <h2 style="padding: 50px;"></h2>
+    <section id="contact" class="contact-section">
+<div class="contact-container">
+  <h2>Contact Me</h2>
+
+  <a href="https://instagram.com/r.ghzn" target="_blank" class="contact-icon">
+    <i class="fab fa-instagram"></i>  
+  </a>
+
+  <a href="https://wa.me/6282227498580" target="_blank" class="contact-icon">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <a href="mailto:rioffag@gmail.com" class="contact-icon">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
+</section>
+  </section>
+
+  <script>
+  function hitungLuas() {
+    const alas = parseFloat(document.getElementById("alas").value);
+    const tinggi = parseFloat(document.getElementById("tinggi").value);
+    if (!alas || !tinggi) {
+      document.getElementById("hasil").innerText = "Masukkan alas dan tinggi yang valid!";
+      return;
+    }
+    const luas = (alas * tinggi) / 2;
+    document.getElementById("hasil").innerText = "Luas segitiga: " + luas.toFixed(2);
+  }
+
+  function hitungKeliling() {
+    const alas = parseFloat(document.getElementById("alas").value);
+    if (!alas) {
+      document.getElementById("hasil").innerText = "Masukkan alas yang valid!";
+      return;
+    }
+    const keliling = 3 * alas;
+    document.getElementById("hasil").innerText = "Keliling segitiga (sama sisi): " + keliling.toFixed(2);
+  }
+</script>
+
+    <script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.querySelector('nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+<script src="script.js"></script>
+<script>
+  const menutoggle = document.getElementById('menu-toggle');
+  menutoggle.addEventListener('click', () => {
+    menutoggle.classList.toggle('active');
+  });
+</script>
+<script> 
+  const backToHome = document.querySelector('.back-to-home');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToHome.style.display = 'block';
+    } else {
+      backToHome.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
